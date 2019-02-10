@@ -13,7 +13,7 @@ public class AddBackendMenu extends Menu {
 		
 		AddDatabaseBackend database=new AddDatabaseBackend(1, "Database Backend",menu);
 		AddFileBackend file=new AddFileBackend(2, "File System Backend", menu);
-		GoBack back=new GoBack(3, "Go Back");
+		GoBack back=new GoBack(3, "Go Back", menu);
 		Exit exit=new Exit(4,"Exit");
 		
 		this.addMenuItem(database);

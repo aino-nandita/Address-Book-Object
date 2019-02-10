@@ -1,17 +1,18 @@
 package menu;
 
+import backendmanager.BackendManagerMenu;
 import menuItem.MenuItem;
 
 public class GoBack extends MenuItem {
 
-	MenuItem parent;
-	public GoBack(int id, String name) {
+	BackendManagerMenu bmanager;
+	public GoBack(int id, String name, BackendManagerMenu bmanager) {
 		super(id, name);
-		this.parent=parent;
+		this.bmanager=bmanager;
 	}
 
 	@Override
 	public void doSelected() {
-		parent.doSelected();
+		bmanager.doSelected();
 	}
 }

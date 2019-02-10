@@ -26,8 +26,8 @@ public class SwitchToDatabaseBackend extends Menu {
 		ReadAddress read=new ReadAddress(2, "Read Address", menu);
 		UpdateAddress update=new UpdateAddress(3, "Update Address", menu);
 		DeleteAddress delete=new DeleteAddress(4, "Delete Address", menu);
-		GoBack back=new GoBack(3, "Go Back");
-		Exit exit=new Exit(4,"Exit");
+		GoBack back=new GoBack(5, "Go Back", menu);
+		Exit exit=new Exit(6,"Exit");
 		
 		this.bm=menu;
 		

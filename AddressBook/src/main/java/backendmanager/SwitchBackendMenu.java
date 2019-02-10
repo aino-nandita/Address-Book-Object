@@ -12,7 +12,7 @@ public class SwitchBackendMenu extends Menu {
 		
 		SwitchToDatabaseBackend database=new SwitchToDatabaseBackend(1, "Switch to Database Backend",menu);
 		SwitchToFileBackend file=new SwitchToFileBackend(2, "Switch to File Backend ", menu);
-		GoBack back=new GoBack(3, "Go Back");
+		GoBack back=new GoBack(3, "Go Back", menu);
 		Exit exit=new Exit(4,"Exit");
 		
 		this.addMenuItem(database);

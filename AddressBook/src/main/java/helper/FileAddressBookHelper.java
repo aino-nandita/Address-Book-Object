@@ -49,9 +49,9 @@ public class FileAddressBookHelper implements BackendHelper {
 	public void display() {
 		System.out.println("\nList of Addresses : ");
 		for(Address address: addresslist) {
-			System.out.println(address.getName());
-			System.out.println(address.getEmail());
-			System.out.println(address.getPhoneNumber());
+			System.out.println("Name: "+ address.getName());
+			System.out.println("Email: "+ address.getEmail());
+			System.out.println("Phone Number: "+ address.getPhoneNumber());
 			System.out.println();
 		}
 	}
@@ -59,12 +59,17 @@ public class FileAddressBookHelper implements BackendHelper {
 	
 	public void readAddressbook(String name) {
 		System.out.println("\n ***** Displaying Address ******\n");
-		
-		for(Address address : addresslist) {
-			System.out.println("Name: "+ name);
-			System.out.println("Email: "+ address.getEmail());
-			System.out.println("Phone Number: "+ address.getPhoneNumber());
-			System.out.println();
+		try {
+			for(Address address : addresslist) {
+				if(name.equals(address.getName())) {
+					System.out.println("Name: "+ name);
+					System.out.println("Email: "+ address.getEmail());
+					System.out.println("Phone Number: "+ address.getPhoneNumber());
+				}
+				System.out.println();
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 
